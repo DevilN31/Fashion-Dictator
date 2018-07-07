@@ -1,43 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Clock : MonoBehaviour {
 
-    public int ratio;
+    [Range(0,1)]
+    public float ratio;
     public float newRatio;
     int timePassed;
-    Vector3 targetAngles;
 
-    // Use this for initialization
+    public Text timerDisplay;
+
     void Start ()
     {
         timePassed = (int)Time.time;
 	}
 	
-	// Update is called once per frame
 	void Update ()
     {
        timePassed = (int)Time.time;
-        ratio = 60 - ((int)timePassed/60);
+        
+        ratio = timePassed/60f;
 
-        if(ratio >= 0)
-        Debug.Log(timePassed);
-
-        if (ratio > newRatio)
+        
+        if (ratio > newRatio && ratio <=1)
         {
             newRatio = ratio;
-           // Rotate(newRatio);
+            RotateHandle();
+            timerDisplay.text =(60 - timePassed) + "";
+
         }
 
         
     }
 
-    void Rotate(float ratio)
+    void RotateHandle()
     {
+        Vector3 test = transform.eulerAngles;
 
-        targetAngles = transform.eulerAngles + 60f * Vector3.forward;
-        print(targetAngles);
+        transform.eulerAngles = test + (Vector3.forward * 6);
 
     }
 }
