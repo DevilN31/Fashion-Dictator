@@ -91,6 +91,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4725949639176288}
+  - component: {fileID: 114077368995934328}
   m_Layer: 0
   m_Name: ShoesPlaceHolder
   m_TagString: Untagged
@@ -284,6 +285,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114077368995934328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1948027775387840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 674052842c644ce43b995582d640ea0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clothesName: Shoes
+  isLong: 0
 --- !u!114 &114105711451337628
 MonoBehaviour:
   m_ObjectHideFlags: 1

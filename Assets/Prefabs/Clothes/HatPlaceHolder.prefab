@@ -55,6 +55,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4727509503782134}
+  - component: {fileID: 114059795366079798}
   m_Layer: 0
   m_Name: HatPlaceHolder
   m_TagString: Untagged
@@ -137,6 +138,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114059795366079798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1610588460205474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 674052842c644ce43b995582d640ea0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clothesName: Hat
+  isLong: 1
 --- !u!114 &114221343283151868
 MonoBehaviour:
   m_ObjectHideFlags: 1

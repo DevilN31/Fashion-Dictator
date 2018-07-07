@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4685885563334412}
+  - component: {fileID: 114186697037542562}
   m_Layer: 0
   m_Name: ShirtPlaceHolder
   m_TagString: Untagged
@@ -197,6 +198,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f551b0f1aeac8e4d8c047458546169a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114186697037542562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1178277291305222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 674052842c644ce43b995582d640ea0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clothesName: Shirt
+  isLong: 1
 --- !u!114 &114363764902610610
 MonoBehaviour:
   m_ObjectHideFlags: 1
