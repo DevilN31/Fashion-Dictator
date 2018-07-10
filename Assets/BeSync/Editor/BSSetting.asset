@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1064111409, guid: d33e5031f9fa64bfdb815360a0bf4a1b, type: 3}
+  m_Name: BSSetting
+  m_EditorClassIdentifier: 
+  disable: 0
+  fileSearchRate: 100
+  useSpecialDirectory: 0
+  specialDirectoryPath: 
+  ignoreStandardAssetDirectory: 0
+  forceStartAgain: 0
+  ignoreList: []
+  useWhiteList: 0
+  whiteList: []
+  waitFrame: 2
