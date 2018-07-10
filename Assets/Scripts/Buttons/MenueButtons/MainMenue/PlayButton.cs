@@ -7,6 +7,6 @@ public class PlayButton : MonoBehaviour {
 
 	public void PlayButtonPress()
     {
-        SceneManager.LoadScene("PlayScene");
+        SceneManager.LoadScene("NewPlayScene");
     }
 }
