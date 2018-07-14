@@ -2,84 +2,81 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Clothes : MonoBehaviour
 {
-    //Tomer's addition
-    //-------------------------
-    const int color_yellow = 0;
-    const int color_orange = 1;
-    const int color_red = 2;
-    const int color_purple = 3;
-    const int color_blue = 4;
-    const int color_green = 5;
-
-    const int counter_colors_yellow_purple = 0;
-    const int counter_colors_orange_blue = 1;
-    const int counter_colors_red_green = 2;
-
-    const int hatAcc = 0;
-    const int coat = 1;
-    const int shirt = 2;
-    const int pants = 3;
-    const int shoes = 4;
-
-    public int clothType;
-
-    //const int color_warm = 0;
-    //const int color_cold = 1;
-
-    public bool warmColor;
-
-    public int clothColor;
-    public int counter_colors;
-    public int colorTemp;
-
-    ColorsEnum colorsEnum;
-    //-------------------------
-
     public string clothesName;
     public bool isLong;
-
+    public bool warmColor;
+    public ClothColors clothColor;
+    public CounterColors counterColors;
+    public ClothesType clothesType;
+    private Color myColor;
+    
+    /*
     public Clothes(string name, bool isItLong)
     {
         clothesName = name;
         isLong = isItLong;
     }
-
+    */
     public bool GetIsLong()
     {
         return isLong;
     }
 
 
-    //Tomer's addition
-    //Sets the color of the clothing item. Also sets what type of counter colors it belongs to, and what it's color temparture, based on it's color.
-    //-------------------------
-    public void SetColor(int color)
+   // Sets cloth color 
+   // Sets Counter Colors group
+    public void SetColorAndCounterGroup(ClothColors color)
     {
+        //set cloth color
         clothColor = color;
 
-        if (color == color_yellow || color == color_purple)
-            counter_colors = counter_colors_yellow_purple;
+        //set counterColorGroup
+        if (color == ClothColors.Yellow || color == ClothColors.Purple)
+            counterColors = CounterColors.YellowPurple;
 
-        else if (color == color_orange|| color == color_blue)
-            counter_colors = counter_colors_orange_blue;
+        else if (color == ClothColors.Orange || color == ClothColors.Blue)
+            counterColors = CounterColors.OrangeBlue;
 
-        else if (color == color_red|| color == color_green)
-            counter_colors = counter_colors_red_green;
+        else if (color == ClothColors.Red || color == ClothColors.Green)
+            counterColors = CounterColors.RedGreen;
 
-        if (color >= 0 && color < 3)
+        //Set warm or cold clothes
+        if ((int)color >= 0 && (int)color < 3)
             warmColor = true;
-        //colorTemp = color_warm;
-        else if (color >= 3)
+        else if ((int)color >= 3)
             warmColor = false;
-        //colorTemp = color_cold;
     }
 
-    public void SetType(int type)
+    // Set cloth type
+    public void SetType(ClothesType type)
     {
-        clothType = type;
+        clothesType = type;
     }
-    //-------------------------
+
+    void Start()
+    {
+        ChangeColorTest(UtilityScript.colorsDic[clothColor]);
+        
+    }
+   
+    void Update()
+    {
+        SetColorAndCounterGroup(clothColor);
+        ChangeColorTest(UtilityScript.colorsDic[clothColor]);
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Debug.Log(clothesName + ", isLong: " + isLong + ", Color: " + clothColor + ", ConterColorGroup: " + counterColors + ", ClothesType: " + clothesType + ", WarmColor: " + warmColor);
+        }
+    }
+
+    void ChangeColorTest(string colorValue)
+    {
+        ColorUtility.TryParseHtmlString(colorValue, out myColor);
+        GetComponent<Image>().color = myColor;
+    }
 }

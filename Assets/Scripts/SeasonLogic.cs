@@ -8,9 +8,10 @@ public enum Seasons { Spring, Summer, Fall, Winter }
 
 public class SeasonLogic : MonoBehaviour
 {
+    [SerializeField]
     private Seasons currentSeason;
 
-    public bool DetermineCorrectLength(List<Clothes> clothes)
+    public bool DetermineCorrectLength(Clothes[] clothes)
     {
         int longClothes = 0;
         int shortClothes = 0;

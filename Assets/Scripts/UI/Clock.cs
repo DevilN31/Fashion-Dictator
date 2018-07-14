@@ -27,7 +27,7 @@ public class Clock : MonoBehaviour {
         if (ratio > newRatio && ratio <=1)
         {
             newRatio = ratio;
-            RotateHandle();
+           // RotateHandle();
             timerDisplay.text =(60 - timePassed) + "";
 
         }
@@ -35,6 +35,7 @@ public class Clock : MonoBehaviour {
         
     }
 
+    /*
     void RotateHandle()
     {
         Vector3 test = transform.eulerAngles;
@@ -42,4 +43,5 @@ public class Clock : MonoBehaviour {
         transform.eulerAngles = test + (Vector3.forward * 6);
 
     }
+    */
 }
