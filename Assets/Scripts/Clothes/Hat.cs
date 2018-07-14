@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hat : MonoBehaviour
+public class Hat : Clothes
 {
     SpriteRenderer spriteRenderer;
     Animator anim;
