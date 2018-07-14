@@ -36,7 +36,7 @@ public enum CounterColors
 public enum ClothesType
 {
     HatAcc,
-    Shirt,
+    Top,
     Pants,
     Shoes
 }

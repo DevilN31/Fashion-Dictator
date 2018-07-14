@@ -227,7 +227,7 @@ MonoBehaviour:
   warmColor: 1
   clothColor: 1
   counterColors: 0
-  clothesType: 4
+  clothesType: 3
 --- !u!114 &675910602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c3de9c079d35d2f4ba9f97879f815e4c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 73cb2b450c053ba4d8d963378fda1807, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -392,7 +392,7 @@ MonoBehaviour:
   warmColor: 1
   clothColor: 4
   counterColors: 0
-  clothesType: 3
+  clothesType: 2
 --- !u!114 &1154978106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,9 +476,9 @@ MonoBehaviour:
   clothesName: Shirt
   isLong: 0
   warmColor: 1
-  clothColor: 1
+  clothColor: 4
   counterColors: 0
-  clothesType: 2
+  clothesType: 1
 --- !u!114 &1179739595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c3de9c079d35d2f4ba9f97879f815e4c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da88c5dcce7bd064eaa6a45f093cfb05, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -665,7 +665,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c3de9c079d35d2f4ba9f97879f815e4c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f39c2c53bae5b354f9fd5f71c9f6265a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
