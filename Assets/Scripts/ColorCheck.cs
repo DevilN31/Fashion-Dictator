@@ -4,29 +4,13 @@ using UnityEngine;
 
 public class ColorCheck : MonoBehaviour {
 
-    static int monochrome = 0;
-    static int counterColors = 1;
-    static int warmColors = 2;
-    static int coldColors = 3;
 
-    int currentColorRule;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public ColorRules currentColorRule;
 
     public bool CheckColors(Clothes[] clothesToCheck)
     {
-
         Clothes hatAcc = null;
-        Clothes coat = null;
-        Clothes shirt = null;
+        Clothes top = null;
         Clothes pants = null;
         Clothes shoes = null;
 
@@ -34,10 +18,8 @@ public class ColorCheck : MonoBehaviour {
         {
             if (hatAcc == null)
                 hatAcc = item;
-            else if (coat == null)
-                coat = item;
-            else if (shirt == null)
-                shirt = item;
+            else if (top == null)
+                top = item;
             else if (pants == null)
                 pants = item;
             else if (shoes == null)
@@ -46,29 +28,65 @@ public class ColorCheck : MonoBehaviour {
 
         switch (currentColorRule)
         {
-            case 0:
-                if (hatAcc.clothColor == coat.clothColor && coat.clothColor == shirt.clothColor && shirt.clothColor == pants.clothColor && pants.clothColor == shoes.clothColor)
+            case ColorRules.Monochrome:
+                if (hatAcc.clothColor == top.clothColor &&
+                    top.clothColor == pants.clothColor && pants.clothColor == shoes.clothColor)
+                {
+                    Debug.Log("Returned true for " + currentColorRule);
                     return true;
-                    else return false;
+                }
 
-            case 1:
-                if (hatAcc.counter_colors == coat.counter_colors && coat.counter_colors == shirt.counter_colors && shirt.counter_colors == pants.counter_colors && pants.counter_colors == shoes.counter_colors)
-                    return true;
-                else return false;
+                else
+                {
+                    Debug.Log("Returned false for " + currentColorRule);
+                    return false;
+                }
 
-            case 2:
-                if (hatAcc.warmColor == coat.warmColor && coat.warmColor == shirt.warmColor && shirt.warmColor == pants.warmColor && pants.warmColor == shoes.warmColor)
+            case ColorRules.CounterColors:
+                if (hatAcc.counterColors  == top.counterColors &&
+                    top.counterColors == pants.counterColors && pants.counterColors == shoes.counterColors)
+                {
+                    Debug.Log("Returned true for " + currentColorRule);
                     return true;
-                else return false;
+                }
 
-            case 3:
-                if (hatAcc.warmColor == coat.warmColor && coat.warmColor == shirt.warmColor && shirt.warmColor == pants.warmColor && pants.warmColor == shoes.warmColor)
+                else
+                {
+                    Debug.Log("Returned false for " + currentColorRule);
+                    return false;
+                }
+
+            case ColorRules.WarmColors:
+                if (hatAcc.warmColor == top.warmColor &&
+                    top.warmColor == pants.warmColor && pants.warmColor == shoes.warmColor)
+                {
+                    Debug.Log("Returned true for " + currentColorRule);
                     return true;
-                else return false;
+                }
+
+                else
+                {
+                    Debug.Log("Returned false for " + currentColorRule);
+                    return false;
+                }
+
+            case ColorRules.ColdColors:
+                if (hatAcc.warmColor == top.warmColor && top.warmColor == pants.warmColor && 
+                    pants.warmColor == shoes.warmColor)
+                {
+                    Debug.Log("Returned true for " + currentColorRule);
+                    return true;
+                }
+
+                else
+                {
+                    Debug.Log("Returned false for " + currentColorRule);
+                    return false;
+                }
 
             default:
-            return false;
+                Debug.Log("Somehow default activated when the current color rule was checked in the switch");
+                return false;
         }
-        return false;
     }
 }

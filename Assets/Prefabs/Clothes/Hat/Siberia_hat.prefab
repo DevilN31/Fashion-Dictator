@@ -52,6 +52,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dfc9019894e6ad43b1a75d6dcb45acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clothesName: 
+  isLong: 0
+  warmColor: 0
+  clothColor: 0
+  counterColors: 0
+  clothesType: 0
 --- !u!212 &212549942366897944
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -94,5 +100,5 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
